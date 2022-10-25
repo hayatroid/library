@@ -10,7 +10,7 @@ fn main() {
         W: usize,
         vw: [(u32, usize); n],
     }
-    let w = vw.iter().map(|&p| p.1).collect::<Vec<usize>>();
-    let v = vw.iter().map(|&p| p.0).collect::<Vec<u32>>();
+    let w = vw.iter().map(|&p| p.1).collect::<Vec<_>>();
+    let v = vw.iter().map(|&p| p.0).collect::<Vec<_>>();
     println!("{}", knapsack_01(w, v, W));
 }
