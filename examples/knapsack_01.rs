@@ -1,21 +1,16 @@
 // verification-helper: PROBLEM https://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=DPL_1_B
 
 use library::dp::knapsack_01::knapsack_01;
+use library::{input, input_inner, read_value};
 
-// https://qiita.com/tanakh/items/0ba42c7ca36cd29d0ac8
-macro_rules!input{(source=$s:expr,$($r:tt)*)=>{let mut iter=$s.split_whitespace();let mut next=||{iter.next().unwrap()};input_inner!{next,$($r)*}};($($r:tt)*)=>{let stdin=std::io::stdin();let mut bytes=std::io::Read::bytes(std::io::BufReader::new(stdin.lock()));let mut next=move||->String{bytes.by_ref().map(|r|r.unwrap()as char).skip_while(|c|c.is_whitespace()).take_while(|c|!c.is_whitespace()).collect()};input_inner!{next,$($r)*}}}
-macro_rules!input_inner{($next:expr)=>{};($next:expr,)=>{};($next:expr,$var:ident:$t:tt $($r:tt)*)=>{let $var=read_value!($next,$t);input_inner!{$next $($r)*}}}
-macro_rules!read_value{($next:expr,($($t:tt),*))=>{($(read_value!($next,$t)),*)};($next:expr,[$t:tt;$len:expr])=>{(0..$len).map(|_|read_value!($next,$t)).collect::<Vec<_>>()};($next:expr,Chars)=>{read_value!($next,String).chars().collect::<Vec<char>>()};($next:expr,Usize1)=>{read_value!($next,usize)-1};($next:expr,$t:ty)=>{$next().parse::<$t>().expect("Parse error")}}
-
+#[allow(non_snake_case)]
 fn main() {
     input! {
         n: usize,
-        w: usize,
+        W: usize,
         vw: [(u32, usize); n],
     }
-    let mut wv = vec![];
-    for (v, w) in vw {
-        wv.push((w, v));
-    }
-    println!("{}", knapsack_01(wv, w));
+    let w = vw.iter().map(|&p| p.1).collect::<Vec<usize>>();
+    let v = vw.iter().map(|&p| p.0).collect::<Vec<u32>>();
+    println!("{}", knapsack_01(w, v, W));
 }
