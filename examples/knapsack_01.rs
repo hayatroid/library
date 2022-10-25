@@ -17,5 +17,5 @@ fn main() {
     for (v, w) in vw {
         wv.push((w, v));
     }
-    knapsack_01(wv, w);
+    println!("{}", knapsack_01(wv, w));
 }
