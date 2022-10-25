@@ -1,1 +1,1 @@
-mod knapsack_01;
+pub mod knapsack_01;

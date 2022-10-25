@@ -1,5 +1,5 @@
 #[allow(dead_code, non_snake_case)]
-fn knapsack_01<T>(wv: Vec<(usize, T)>, W: usize) -> T
+pub fn knapsack_01<T>(wv: Vec<(usize, T)>, W: usize) -> T
 where
     T: Copy + Clone + std::ops::Add<Output = T> + std::cmp::Ord + std::default::Default,
 {
