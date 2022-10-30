@@ -2,9 +2,6 @@
 data:
   _extendedDependsOn:
   - icon: ':heavy_check_mark:'
-    path: crates/input/src/lib.rs
-    title: crates/input/src/lib.rs
-  - icon: ':heavy_check_mark:'
     path: src/dp.rs
     title: src/dp.rs
   - icon: ':heavy_check_mark:'
@@ -33,7 +30,6 @@ data:
     \    let v = vw.iter().map(|&p| p.0).collect::<Vec<_>>();\n    println!(\"{}\"\
     , knapsack_01(w, v, W));\n}\n"
   dependsOn:
-  - crates/input/src/lib.rs
   - src/dp/knapsack_01.rs
   - src/dp.rs
   - src/lib.rs

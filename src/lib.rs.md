@@ -2,9 +2,6 @@
 data:
   _extendedDependsOn:
   - icon: ':heavy_check_mark:'
-    path: crates/input/src/lib.rs
-    title: crates/input/src/lib.rs
-  - icon: ':heavy_check_mark:'
     path: src/dp.rs
     title: src/dp.rs
   - icon: ':heavy_check_mark:'
@@ -37,7 +34,6 @@ data:
 
     '
   dependsOn:
-  - crates/input/src/lib.rs
   - src/dp/knapsack_01.rs
   - src/dp.rs
   isVerificationFile: false

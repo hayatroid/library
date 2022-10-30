@@ -1,11 +1,6 @@
 ---
 data:
   libraryCategories:
-  - name: crates/input/src
-    pages:
-    - icon: ':heavy_check_mark:'
-      path: crates/input/src/lib.rs
-      title: crates/input/src/lib.rs
   - name: src/dp
     pages:
     - icon: ':heavy_check_mark:'
