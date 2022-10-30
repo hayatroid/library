@@ -43,11 +43,11 @@ macro_rules! read_value {
         (0..$len).map(|_| read_value!($next, $t)).collect::<Vec<_>>()
     };
 
-    ($next:expr, chars) => {
+    ($next:expr, Chars) => {
         read_value!($next, String).chars().collect::<Vec<char>>()
     };
 
-    ($next:expr, usize1) => {
+    ($next:expr, Usize1) => {
         read_value!($next, usize) - 1
     };
 

@@ -1,7 +1,7 @@
 // verification-helper: PROBLEM https://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=DPL_1_B
 
+use input::*;
 use library::dp::knapsack_01::knapsack_01;
-use library::*;
 
 #[allow(non_snake_case)]
 fn main() {
