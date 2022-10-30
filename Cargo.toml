@@ -8,3 +8,4 @@ edition = "2018"
 
 [dependencies]
 input = { path = "./crates/input" }
+proconio = "=0.3.6"
